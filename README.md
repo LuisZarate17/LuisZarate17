@@ -27,8 +27,8 @@ A reservation API I built to break on purpose, then fix with measurements.
 **[MasteryPilot](https://github.com/LuisZarate17/MasteryPilot)** · Python · Django · C# · React
 AI curriculum tutor running an open-weight 8B model on local hardware, with no hosted API. I owned the Django backend and the C# model selector on a 3-person team.
 
-**[AlumniNetwork](https://github.com/LuisZarate17/AlumniNetwork)** · React · TypeScript · ASP.NET · SQL Server
-Full-stack alumni directory, built test-first with NUnit across Agile sprints.
+**[CougarConnect](https://github.com/LuisZarate17/CougarConnect)** · C# · Blazor Server · .NET 8 · PostgreSQL
+Alumni networking platform with search, connection requests, and messaging. ASP.NET Core Identity auth with 2FA, live demo, tested with xUnit.
 
 ---
 
