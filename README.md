@@ -1,37 +1,47 @@
-### Hi, I'm Luis Zarate
+```bash
+$ whoami
+luis zarate · software engineer · seattle, wa
 
-Software engineer in Seattle. I build backend systems and measure where they break: race conditions, slow queries, and the fixes that make things worse before they make them better.
+$ cat status.txt
+open to full-time SWE roles · WSU CS '26 · President's Honor Roll
+```
 
-WSU Computer Science, May 2026 · President's Honor Roll · Bilingual (English / Spanish)
-**Open to full-time software engineering roles.**
-
----
-
-### Start here
-
-**[labqueue](https://github.com/LuisZarate17/labqueue)** · C# / .NET 10 · PostgreSQL 17 · k6 · Docker
-A lab reservation API built to find and fix real database failures under concurrent load.
-* Found a SELECT-then-INSERT race that double-booked slots under load; closed it with a PostgreSQL exclusion constraint (`btree_gist`)
-* The fix introduced deadlocks (40P01, roughly 1 in 20 runs), and EF Core's retry policy turned them into a lock convoy. The writeup covers how I traced and resolved it
-* Replaced a sequential scan on overlap queries with a GiST index, measured by before/after P99 latency
-
-### Other work
-
-**[MasteryPilot](https://github.com/LuisZarate17/MasteryPilot)** · Python · Django · C# · React · local 8B LLM
-AI curriculum tutor that runs an open-weight model on local hardware instead of calling a hosted API. Three-person team; I owned the Django backend and the C# model selector.
-
-**[AlumniNetwork](https://github.com/LuisZarate17/AlumniNetwork)** · React · TypeScript · ASP.NET · SQL Server · NUnit
-Full-stack alumni directory with profile management and search, built test-first with NUnit across Agile sprints.
+I like finding out where systems break. Race conditions, slow queries,
+and the fixes that quietly make things worse before they make them better.
 
 ---
 
-### Stack
+### 🔧 Start here
 
-**Languages:** C#, Python, TypeScript, C/C++, SQL
-**Backend:** ASP.NET, Entity Framework, Django, Flask, PostgreSQL, SQL Server
-**Frontend:** React, TypeScript
-**Infra & testing:** Docker, GitHub Actions, k6, NUnit, pytest, Linux
+**[labqueue](https://github.com/LuisZarate17/labqueue)** · C# · .NET 10 · PostgreSQL 17 · k6 · Docker
 
-### Contact
+A reservation API I built to break on purpose, then fix with measurements.
 
-[LinkedIn](https://www.linkedin.com/in/luiszarate1) · lz.zarate.1@gmail.com
+* **The bug:** a SELECT-then-INSERT race double-booked slots under concurrent load
+* **The fix:** a PostgreSQL exclusion constraint (`btree_gist`)
+* **The twist:** the fix caused deadlocks (40P01, about 1 in 20 runs), and EF Core's retry policy made it worse by turning them into a lock convoy. The writeup shows how I traced it.
+* **The speedup:** a GiST index replaced a sequential scan on overlap queries, with before and after P99 latency
+
+### Also built
+
+**[MasteryPilot](https://github.com/LuisZarate17/MasteryPilot)** · Python · Django · C# · React
+AI curriculum tutor running an open-weight 8B model on local hardware, with no hosted API. I owned the Django backend and the C# model selector on a 3-person team.
+
+**[AlumniNetwork](https://github.com/LuisZarate17/AlumniNetwork)** · React · TypeScript · ASP.NET · SQL Server
+Full-stack alumni directory, built test-first with NUnit across Agile sprints.
+
+---
+
+### 🧰 Stack
+
+`C#` `Python` `TypeScript` `C/C++` `SQL`
+`ASP.NET` `Django` `Flask` `React` `PostgreSQL` `SQL Server`
+`Docker` `GitHub Actions` `k6` `NUnit` `pytest` `Linux`
+
+### 🖥️ Off the clock
+
+* Built my own PC and run 14B local LLMs on it with an RTX 5070 Ti
+* Coached middle school football in Pullman
+* Hablo español
+
+📫 [LinkedIn](https://www.linkedin.com/in/luiszarate1) · lz.zarate.1@gmail.com
