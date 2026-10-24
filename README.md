@@ -24,8 +24,8 @@ A reservation API I built to break on purpose, then fix with measurements.
 
 ### Also built
 
-**[MasteryPilot](https://github.com/LuisZarate17/MasteryPilot)** · Python · Django · C# · React
-AI curriculum tutor running an open-weight 8B model on local hardware, with no hosted API. I owned the Django backend and the C# model selector on a 3-person team.
+**[MasteryPilot](https://github.com/LuisZarate17/MasteryPilot)** · Python · Django · FAISS · local LLM
+Self-hosted AI tutor for school districts. Hybrid retrieval over each district's own curriculum, with a 4-bit open-weight model (Qwen3) running on local GPU so student data never leaves the building. I owned the Django backend on a 3-person team.
 
 **[CougarConnect](https://github.com/LuisZarate17/CougarConnect)** · C# · Blazor Server · .NET 8 · PostgreSQL
 Alumni networking platform with search, connection requests, and messaging. ASP.NET Core Identity auth with 2FA, live demo, tested with xUnit.
