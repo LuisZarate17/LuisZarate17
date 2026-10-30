@@ -31,7 +31,7 @@ A reservation API I built to break on purpose, then fix with measurements.
 
 **[MasteryPilot](https://github.com/LuisZarate17/MasteryPilot)** · Python · Django · FAISS · local LLM
 
-Self-hosted AI tutor for school districts. Hybrid retrieval over each district's own curriculum, 492 tests, and a 4-bit open-weight model (Qwen3) running on local GPU so student data never leaves the building. I owned the Django backend on a 3-person team.
+Self-hosted AI tutor for school districts. Hybrid retrieval over each district's own curriculum, about 500 tests, and a 4-bit open-weight model (Qwen3) running on local GPU so student data never leaves the building. 3-person capstone; afterward I rebuilt the retrieval pipeline and hardened it solo.
 
 **[CougarConnect](https://github.com/LuisZarate17/CougarConnect)** · C# · Blazor Server · .NET 8 · PostgreSQL
 
