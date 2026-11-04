@@ -25,9 +25,13 @@ A reservation API I built to break on purpose, then fix with measurements.
 
 * **The bug:** a SELECT-then-INSERT race double-booked slots under concurrent load. Fixed with a PostgreSQL exclusion constraint (`btree_gist`).
 * **The twist:** the fix caused deadlocks (40P01, about 1 in 20 runs), and EF Core's retry policy made it worse by turning them into a lock convoy. The writeup shows how I traced it.
-* **The speedup:** a GiST index replaced a sequential scan on the overlap query, cutting query time 27×. I report the 2.1× end-to-end number because that's what a user would actually feel.
+* **The speedup:** the overlap query read 2,454 rows through a foreign-key index to return 23. A GiST index on `(resource_id, during)` cut query time 27×. I report the 2.1× end-to-end number because that's what a user would actually feel.
 
 ### Also built
+
+**[bifrost](https://github.com/LuisZarate17/bifrost)** · Rust · Tauri · TypeScript · React · Ollama
+
+Local-first AI tools for Windows: a screen assistant, a desktop coding chat app, and a terminal coding agent, all on one local model. Every edit is shown as a diff and approved before it's written, undo is byte-exact, and model-written code runs inside Windows job objects with memory and disk limits. I chose the coding model by benchmarking candidates on real tasks from the repo, scored by hidden tests: 76% vs 43% for the baseline. 1,100+ Rust tests.
 
 **[MasteryPilot](https://github.com/LuisZarate17/MasteryPilot)** · Python · Django · FAISS · local LLM
 
@@ -41,13 +45,13 @@ Alumni networking platform with search, connection requests, and messaging. ASP.
 
 ### 🧰 Stack
 
-`C#` `Python` `TypeScript` `C/C++` `SQL`
-`ASP.NET` `Blazor` `Django` `Flask` `React` `PostgreSQL`
-`Docker` `GitHub Actions` `k6` `xUnit` `pytest` `FAISS` `Linux`
+`C#` `Rust` `Python` `TypeScript` `C/C++` `SQL`
+`ASP.NET` `Blazor` `Django` `Flask` `React` `Tauri` `PostgreSQL`
+`Docker` `GitHub Actions` `k6` `xUnit` `FAISS` `Ollama` `Linux`
 
 ### 🖥️ Off the clock
 
-* Built my own PC and run 14B local LLMs on it with an RTX 5070 Ti
+* Built my own PC and run local LLMs up to 35B on it with an RTX 5070 Ti
 * Coached middle school football in Pullman
 * Hablo español
 
